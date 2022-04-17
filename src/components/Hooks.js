@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Hooks = () => {
   let idade = 30;
@@ -12,6 +12,10 @@ const Hooks = () => {
   const changeNewAge = () => {
     setNovaIdade(45);
   };
+  // Se o useState mudar, useEffect é executado novamente
+  useEffect(() => {
+    console.log("Testando!");
+  });
   return (
     <div>
       <p>Idade: {idade}</p>
